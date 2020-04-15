@@ -202,8 +202,8 @@ export default class Basket extends Component {
         return;
       }
       require("dotenv").config();
-      let url = `"${process.env.DB_POST}"`;
-      fetch(url, {
+
+      fetch(`"${process.env.DB_POST}"`, {
         method: "POST",
         body: JSON.stringify({
           cartItems: cartItems,
