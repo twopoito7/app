@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Abel";
+  src: url("./fonts/Abel-Regular.ttf") format("ttf");
+}
+body {
+  margin: 0;
+  background: white;
+  padding: 0;
+  font-family: "Abel";
+  font-weight: thin;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: black;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+div {
+  border-color: white;
+  line-height: 30px;
+  font-weight: inherit;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  color: white;
+}
+
+button {
+  display: inline-block;
+  color: black;
+  border: none;
+  padding: 5px;
+  margin: 0;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Abel";
+  font-size: 1em;
+  font-weight: 200;
+}
+col-md-3 {
+  color: black;
+}
