@@ -15,6 +15,7 @@ const CheckoutButton = styled.button`
   padding: 5px;
   font-weight: 300;
   color: white;
+  font-family: Open Sans;
 `;
 
 const BasketWrapper = styled.div`
@@ -25,6 +26,7 @@ const BasketWrapper = styled.div`
   padding: 0px;
   border: 0px;
   border-top: 0px;
+  font-family: Open Sans;
 `;
 
 const ItemTitle = styled.b`
