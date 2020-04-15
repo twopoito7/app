@@ -1,12 +1,8 @@
-@font-face {
-  font-family: "Abel";
-  src: url("./fonts/Abel-Regular.ttf") format("ttf");
-}
 body {
   margin: 0;
   background: white;
   padding: 0;
-  font-family: "Abel";
+  font-family: Open Sans;
   font-weight: thin;
   color: black;
   -webkit-font-smoothing: antialiased;
@@ -43,7 +39,7 @@ button {
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  font-family: "Abel";
+  font-family: Open Sans;
   font-size: 1em;
   font-weight: 200;
 }

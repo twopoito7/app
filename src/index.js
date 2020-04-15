@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import "./fonts/Abel-Regular.ttf";
 require("dotenv").config();
 ReactDOM.render(<App />, document.getElementById("root"));
 

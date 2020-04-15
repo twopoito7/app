@@ -10,6 +10,13 @@ const CloseButton = styled.button`
   font-weight: 300;
   color: white;
 `;
+
+const CheckoutButton = styled.button`
+  padding: 5px;
+  font-weight: 300;
+  color: white;
+`;
+
 const BasketWrapper = styled.div`
   background: white;
   color: black;
@@ -28,6 +35,7 @@ const ItemTitle = styled.b`
   padding: 0px;
   border: 0px;
   border-top: 0px;
+  font-family: Open Sans;
 `;
 
 const EmptyBasket = styled.div`
@@ -35,6 +43,7 @@ const EmptyBasket = styled.div`
   margin-left: 0;
   padding: 0px;
   border: 0px;
+  font-family: Open Sans;
 `;
 
 const MemberID = styled.input`
@@ -43,6 +52,7 @@ const MemberID = styled.input`
   padding: 0px;
   border: 1px solid black;
   width: 100px;
+  font-family: Open Sans;
 `;
 
 const StartTime = styled.select`
@@ -55,6 +65,7 @@ const StartTime = styled.select`
   font-size: 1em;
   text-align: left;
   color: none;
+  font-family: Open Sans;
 `;
 
 const EndTime = styled.select`
@@ -67,6 +78,7 @@ const EndTime = styled.select`
   font-size: 1em;
   text-align: left;
   color: none;
+  font-family: Open Sans;
 `;
 
 const DateStyled = styled.div`
@@ -81,6 +93,7 @@ const DateStyled = styled.div`
   font-size: 0.5em;
   text-align: left;
   color: none;
+  font-family: Open Sans;
 `;
 
 const TimeWindow = styled.div`
@@ -94,6 +107,7 @@ const TimeWindow = styled.div`
   font-size: 1em;
   text-align: left;
   color: none;
+  font-family: Open Sans;
 `;
 const FormStyled = styled.form`
   background: white;
@@ -106,6 +120,7 @@ const FormStyled = styled.form`
   font-size: 1em;
   text-align: left;
   color: none;
+  font-family: Open Sans;
 `;
 
 function validate(memberID, date, starttime, cartItems, endtime) {
@@ -184,7 +199,7 @@ export default class Basket extends Component {
         this.setState({ errors });
         return;
       }
-      fetch(`"${process.env.DB_POST}"`, {
+      fetch("https://hooks.zapier.com/hooks/catch/7243921/o5uin0d/", {
         method: "POST",
         body: JSON.stringify({
           cartItems: cartItems,
@@ -280,14 +295,14 @@ export default class Basket extends Component {
               cartItems.reduce((a, c) => a + c.price * c.count, 0)
             )}
           </b>
-          <button
+          <CheckoutButton
             style={{ cursor: "pointer" }}
             onTouchStart={this.onSubmit}
             onClick={void 0}
             className="btn btn-primary"
           >
             checkout
-          </button>
+          </CheckoutButton>
         </FormStyled>
 
         <br />
