@@ -125,7 +125,7 @@ function validate(memberID, date, starttime, cartItems, endtime) {
   if (date.length === 0) {
     errors.push("Must choose Date");
     message.info("Must choose Date");
-    console.log(process.env.DB_POST);
+    console.log(`"${process.env.DB_POST}"`);
   }
   if (starttime.length === 0) {
     errors.push("Must choose time available from");
