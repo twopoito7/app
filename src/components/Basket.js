@@ -201,7 +201,9 @@ export default class Basket extends Component {
         this.setState({ errors });
         return;
       }
-      fetch("https://hooks.zapier.com/hooks/catch/7243921/o5uin0d/", {
+      require("dotenv").config();
+      let url = `"${process.env.DB_POST}"`;
+      fetch(url, {
         method: "POST",
         body: JSON.stringify({
           cartItems: cartItems,
