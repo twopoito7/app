@@ -4,7 +4,6 @@ import Filter from "./components/Filter";
 import Basket from "./components/Basket";
 import styled from "styled-components";
 import "./App.css";
-
 const Col3 = styled.main`
   padding: 0px;
   font-weight: thin;
@@ -65,13 +64,9 @@ class App extends Component {
       });
     }
 
-    fetch("http://localhost:8000/products")
+    fetch("db.json")
       .then(res => res.json())
-      .catch(err =>
-        fetch("db.json")
-          .then(res => res.json())
-          .then(data => data.products)
-      )
+      .then(data => data.products)
       .then(data => {
         this.setState({ products: data });
         this.listProducts();

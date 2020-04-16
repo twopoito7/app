@@ -3,7 +3,6 @@ import util from "../util";
 import styled from "styled-components";
 import "antd/dist/antd.css";
 import { message, DatePicker } from "antd";
-
 const CloseButton = styled.button`
   padding: 5px;
   background: black;
@@ -139,10 +138,9 @@ function validate(memberID, date, starttime, cartItems, endtime) {
     errors.push("Name can't be empty");
     message.info("Start time < Latest Time - Please Adjust");
   }
-  if (date.length === 0) {
+  if (date === null) {
     errors.push("Must choose Date");
     message.info("Must choose Date");
-    console.log(`"${process.env.DB_POST}"`);
   }
   if (starttime.length === 0) {
     errors.push("Must choose time available from");
@@ -164,7 +162,7 @@ export default class Basket extends Component {
     super(props);
     this.state = {
       memberID: "",
-      date: "",
+      date: null,
       starttime: "",
       endtime: "0"
     };
@@ -201,9 +199,8 @@ export default class Basket extends Component {
         this.setState({ errors });
         return;
       }
-      require("dotenv").config();
 
-      fetch(`"${process.env.DB_POST}"`, {
+      fetch(process.env.DB_POST, {
         method: "POST",
         body: JSON.stringify({
           cartItems: cartItems,
