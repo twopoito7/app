@@ -13,7 +13,7 @@ const ProductStyled = styled.div`
   padding: 0px;
   margin-right: 0px;
   margin-left: 10px;
-  position: absolute;
+  position: relative;
 `;
 
 const FilterWrapper = styled.div`
@@ -89,7 +89,7 @@ class App extends Component {
       if (state.size !== "") {
         return {
           filteredProducts: state.products.filter(
-            a => a.availableSizes.indexOf(state.size.toUpperCase()) >= 0
+            a => a.availableSizes.indexOf(state.size) >= 0
           )
         };
       }
