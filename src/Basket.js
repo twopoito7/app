@@ -200,7 +200,7 @@ export default class Basket extends Component {
         return;
       }
 
-      fetch(process.env.DB_POST, {
+      fetch(process.env.REACT_APP_DB_POST, {
         method: "POST",
         body: JSON.stringify({
           cartItems: cartItems,

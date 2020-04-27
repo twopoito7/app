@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import util from "../util";
 import styled from "styled-components";
 
 const MainSection = styled.div`
-  margin: 0px;
+  margin: 30px;
   width: 100%;
   color: black;
   font-weight: thin;
@@ -32,24 +31,16 @@ export default class Products extends Component {
     const productItems = this.props.products.map(product => (
       <MainSection className="col-md-4" key={product.id}>
         <Thumbdiv className="thumbnail text-center">
-          <a
-            href={`#${product.id}`}
-            onClick={e => this.props.handleAddToCart(e, product)}
-          >
+     
             <img
               src={`products/${product.sku}_2.jpg`}
               alt={product.title}
               style={{ width: 300, height: 300, backgroundColor: "#ffffff" }}
             />
-            <ProductTitle>{product.title}</ProductTitle>
-          </a>
-          <b>{util.formatCurrency(product.price)}</b>
-          <BuyButton
-            className="btn btn-primary"
-            onClick={e => this.props.handleAddToCart(e, product)}
-          >
-            Add to cart
-          </BuyButton>
+            <ProductTitle>{product.description}</ProductTitle>
+          
+
+       
         </Thumbdiv>
       </MainSection>
     ));
