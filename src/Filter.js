@@ -27,12 +27,12 @@ export default class Products extends Component {
               value={this.props.size}
               onChange={this.props.handleSizeChange}
             >
-              <option value=" ">ALL</option>
-              <option value="x">X</option>
-              <option value="s">S</option>
-              <option value="m">M</option>
-              <option value="l">L</option>
-              <option value="xl">XL</option>
+              <option value="">ALL</option>
+              <option value="c">Concentrates</option>
+              <option value="f">Flower</option>
+              <option value="e">Edibles</option>
+              <option value="v">Vape</option>
+              <option value="w">Concentrates</option>
             </select>
           </label>
         </div>

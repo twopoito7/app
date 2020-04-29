@@ -2,13 +2,10 @@
 Learn React & Redux From 0 to 100 in this course at https://codingwithbasir.com
 
 ## Demo
-Open  [Shopping Cart Demo](https://basir.github.io/ecommerce-shopping-cart/)
-
-![Demo](https://basir.github.io/ecommerce-shopping-cart/demo.gif)
 
 ## Install
 ```
-$ clone git@github.com:basir/ecommerce-shopping-cart.git 
+$ clone git@github.com:ecommerce-shopping-cart.git 
 $ yarn
 ```
 
