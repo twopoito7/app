@@ -13,17 +13,18 @@ const ProductStyled = styled.div`
   padding: 0px;
   margin-right: 0px;
   margin-left: 10px;
-  position: relative;
+  position: absolute;
+  font-family: Open Sans;
 `;
 
 const FilterWrapper = styled.div`
-  margin: 0px;
-  margin-right: 0px;
-  margin-left: 30px;
+  margin-right: 200px;
+  margin-left: 20px;
   width: 100%;
   align-content: center;
   padding: 0px;
   color: black;
+  font-family: Open Sans;
 `;
 
 class App extends Component {
@@ -89,7 +90,7 @@ class App extends Component {
       if (state.size !== "") {
         return {
           filteredProducts: state.products.filter(
-            a => a.availableSizes.indexOf(state.size) >= 0
+            a => a.availableSizes.indexOf(state.size.toUpperCase()) >= 0
           )
         };
       }

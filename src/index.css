@@ -2,7 +2,7 @@ body {
   margin: 0;
   background: white;
   padding: 0;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-weight: thin;
   color: black;
   -webkit-font-smoothing: antialiased;
@@ -20,6 +20,7 @@ div {
   border-color: white;
   line-height: 30px;
   font-weight: inherit;
+  font-family: sans-serif;
 }
 
 p {
@@ -28,6 +29,7 @@ p {
   margin-right: 0px;
   margin-left: 0px;
   color: white;
+  font-family: sans-serif;
 }
 
 button {
@@ -39,7 +41,7 @@ button {
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  font-family: Open Sans;
+  font-family: sans-serif;
   font-size: 1em;
   font-weight: 200;
 }
