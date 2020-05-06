@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import util from "../util";
 import styled from "styled-components";
 
 const MainSection = styled.div`
@@ -43,13 +42,6 @@ export default class Products extends Component {
             />
             <ProductTitle>{product.title}</ProductTitle>
           </a>
-          <b>{util.formatCurrency(product.price)}</b>
-          <BuyButton
-            className="btn btn-primary"
-            onClick={e => this.props.handleAddToCart(e, product)}
-          >
-            Add to cart
-          </BuyButton>
         </Thumbdiv>
       </MainSection>
     ));
